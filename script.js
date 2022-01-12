@@ -38,29 +38,29 @@ var confrimSpecailCharacters = confirm ("Click OK to confirm if you would like t
          
 }
   //Password
-  var passowrdCharacters = []
+  var passwordCharacters = []
 
   if (confrimNumericCharacters) {
-    passowrdCharacters = passowrdCharacters.concat(numeric)
+    passwordCharacters = passwordCharacters.concat(numeric)
   }
 
   if (confirmUpperCase) {
-    passowrdCharacters = passowrdCharacters.concat(uppercase)
+    passwordCharacters = passwordCharacters.concat(uppercase)
   }
 
   if (confirmLowerCase) {
-    passowrdCharacters = passowrdCharacters.concat(lowercase)
+    passwordCharacters = passwordCharacters.concat(lowercase)
   }
 
   if (confrimSpecailCharacters) {
-  passowrdCharacters = passowrdCharacters.concat(special)
+  passwordCharacters = passwordCharacters.concat(special)
   }
 
     // random password generated
     var randomPassword = ""
 
     for (var i = 0; i < confrimLength; i++) {
-      randomPassword = randomPassword + passowrdCharacters[Math.floor(Math.random() * passowrdCharacters.length)];
+      randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
       
     }
 //show password on page
