@@ -37,6 +37,35 @@ var confirmLowerCase = confirm ("Click OK to confirm if you would like to includ
 var confrimSpecailCharacters = confirm ("Click OK to confirm if you would like to include special characters");
          
 }
+  //Password
+  var passowrdCharacters = []
+
+  if (confrimNumericCharacters) {
+    passowrdCharacters = passowrdCharacters.concat(numeric)
+  }
+
+  if (confirmUpperCase) {
+    passowrdCharacters = passowrdCharacters.concat(uppercase)
+  }
+
+  if (confirmLowerCase) {
+    passowrdCharacters = passowrdCharacters.concat(lowercase)
+  }
+
+  if (confrimSpecailCharacters) {
+  passowrdCharacters = passowrdCharacters.concat(special)
+  }
+
+    // random password generated
+    var randomPassword = ""
+
+    for (var i = 0; i < confrimLength; i++) {
+      randomPassword = randomPassword + passowrdCharacters[Math.floor(Math.random() * passowrdCharacters.length)];
+      
+    }
+//show password on page
+  return randomPassword;
+}
 
 
  // Write password to the #password input
