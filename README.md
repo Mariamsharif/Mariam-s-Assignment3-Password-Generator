@@ -4,3 +4,6 @@ In this assignment, It's the password generator using java scrip. We got given t
 
 What did I learn? 
 Using the skills I learned in javascript, I applied my skills when creating a website for a user to manage to get a random password. I used a prompt in javascript and an array to make the website generate a random password for the user.
+
+The website of the password generator:
+https://mariamsharif.github.io/Mariam-s-Assignment3-Password-Generator/
