@@ -6,26 +6,40 @@ var special = ['!','"','#','$','%','&','’','(',')','*','+','=','@','?'];
 
 //Variable Declaration
 var confrimLength = "";
-var confrimSpecailCharacters;
-var confrimNumericCharecters;
+var confrimNumericCharacters;
 var confirmUpperCase;
 var confirmLowerCase;
+var confrimSpecailCharacters;
 
-// Assignment Code
+// Assignment Codes
 var generateBtn = document.querySelector("#generate");
 function generatePassword () { 
  //Validate length 8-128
 
- var confrimLength = (prompt("The Characters of your passwords needs to be between 8-128."));
- //if it doesn't meet the requirment
+ var confrimLength = (prompt("The Characters of your password needs to be between 8-128."));
+ //if outside requirment
  while(confrimLength < 8 || confrimLength > 128) {
-   alert("Password length must be between 8-128 characters long.Try again");
-   var confrimLength = (prompt("The Characters of your passwords needs to be between 8-128."));
+   alert("The length must be between 8-128 character.Try again!");
+   var confrimLength = (prompt("The Characters of your passsword needs to be between 8-128."));
  };
+ //User comfirms to have a numeric,uppercase,lowercase and special characters.
 
+var confrimNumericCharacters = confirm ("Click OK to confirm if you would like to include numeric characters");
+var confirmUpperCase = confirm ("Click OK to confirm if you would like to include Uppercase characters");
+var confirmLowerCase = confirm ("Click OK to confirm if you would like to include lowercase characters");
+var confrimSpecailCharacters = confirm ("Click OK to confirm if you would like to include special characters");
+  //if answer is no
+  while (confrimNumericCharacters === false && confirmUpperCase === false && confirmLowerCase === false && confrimSpecailCharacters === false) {
+    alert ("You must choose at least one parameter");
+    var confrimNumericCharacters = confirm ("Click OK to confirm if you would like to include numeric characters");
+var confirmUpperCase = confirm ("Click OK to confirm if you would like to include Uppercase characters");
+var confirmLowerCase = confirm ("Click OK to confirm if you would like to include lowercase characters");
+var confrimSpecailCharacters = confirm ("Click OK to confirm if you would like to include special characters");
+         
 }
 
-// Write password to the #password input
+
+ // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
